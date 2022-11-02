@@ -13,7 +13,7 @@ export class CdkStarterStack extends cdk.Stack {
 
     // 👇 create a lambda function for API integration
     const getTasksLambda = new lambda.Function(this, 'get-tasks-lambda', {
-      runtime: lambda.Runtime.NODEJS_14_X,
+      runtime: lambda.Runtime.NODEJS_16_X,
       handler: 'index.main',
       code: lambda.Code.fromAsset(path.join(__dirname, '/../src/get-tasks')),
     });
